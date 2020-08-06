@@ -1,6 +1,0 @@
-site_name: Chaos Engineering
-nav:
-    - Home: chaos.md
-    - Ec2-Experiment: ec2_experiment.md
-
-theme: readthedocs
