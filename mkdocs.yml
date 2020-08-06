@@ -1,0 +1,5 @@
+site_name: Chaos Engineering
+nav:
+    - Home: chaos.md
+
+theme: readthedocs
