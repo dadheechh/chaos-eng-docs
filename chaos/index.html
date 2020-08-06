@@ -102,9 +102,9 @@ This interaction is too complex for any human to predict.
 Each of those microservices could have been tested properly a no erroneous behavior would have been highlighted in any test suite or integration environment.
 An interesting example apart from microservices and monoliths are deep learning, neural networks, and other machine learning algorithms. Peeking under the hood in one of these systems, we find a series of rational and irrational values of any nontrivial solution that is too complex for an individual to make sense of.</p>
 <p>Only the meaning of the system that emits a valid response that can be made sense of by a human. The tradeoff between understandability and velocity &amp; flexibility of operating on data has hereby created an opportunity for chaos engineering.</p>
-<p>Why Chaos Engineering is Important?
-So how do we address the problem defined above? We needn’t create a state of the art facility for the very purpose. On the contrary, we can reform our programming practices to model on the deficits of a chaotic system. The fact that a large scale architectural fault cannot be stabilized without solving the smaller issues in the software is a testament to Chaos programming that lays stress on defining, integrating and implementing the various smaller aspects of a software development process.</p>
-<p>Current Problem Scenario:</p>
+<h2 id="why-chaos-engineering-is-important">Why Chaos Engineering is Important?</h2>
+<p>So how do we address the problem defined above? We needn’t create a state of the art facility for the very purpose. On the contrary, we can reform our programming practices to model on the deficits of a chaotic system. The fact that a large scale architectural fault cannot be stabilized without solving the smaller issues in the software is a testament to Chaos programming that lays stress on defining, integrating and implementing the various smaller aspects of a software development process.</p>
+<h2 id="current-problem-scenario">Current Problem Scenario:</h2>
 <p>Microservice architecture is tricky to handle sometimes
 Our systems are scaling faster than before
 Services relying on fault tolerance that can fail will fail
@@ -116,19 +116,19 @@ Combines functionality, trust and behavioural aspects of the system
 The issue is only said to be resolved when it is brought to a point of stability
 How does Chaos Engineering Work?
 It works by doing experimentation on production environments to find critical vulnerabilities in the whole system before they make the entire system unusable for the customers. Many tools used for adding Chaos Engineering practices. It catches all vulnerabilities and allows devs to inject failures into their services and prevent them from becoming large outages which can affect business. Chaos Engineering is a type of Preventive Medicine for Infra. It works in 5 steps –</p>
-<p>Plan for the first Experiment
-Keep questioning about all services and environments &amp; find out areas to find potential weaknesses and find fixes to them. Try injecting a failure or potential delay into all of its dependencies help to start in the beginning.</p>
-<p>Creation of a Hypothesis
-Always Hypothesize on the expected outcomes of events before running it live in production. See how it affects customers, to service, and all its dependencies. Look into all possible scenarios.</p>
-<p>Impact Measurement
-Measure impact on latency, requests per second, and all system resources being in use. It helps in understanding how the entire system behaving under stress. Also measure the system’s availability, durability and it’s reliability.</p>
-<p>Always have a rollback plan
-Always have a backup plan because things can go wrong. Plan to revert the impact of the disaster. If doing things manually, be extra careful, don’t break ssh access to machines.</p>
-<p>Troubleshoot and fix it
-Once done with running the experiments, there will be two possible outcomes: either it’s verified that the system is resilient to the failure introduced, or found an issue and need to fix.</p>
+<h2 id="plan-for-the-first-experiment">Plan for the first Experiment</h2>
+<p>Keep questioning about all services and environments &amp; find out areas to find potential weaknesses and find fixes to them. Try injecting a failure or potential delay into all of its dependencies help to start in the beginning.</p>
+<h2 id="creation-of-a-hypothesis">Creation of a Hypothesis</h2>
+<p>Always Hypothesize on the expected outcomes of events before running it live in production. See how it affects customers, to service, and all its dependencies. Look into all possible scenarios.</p>
+<h2 id="impact-measurement">Impact Measurement</h2>
+<p>Measure impact on latency, requests per second, and all system resources being in use. It helps in understanding how the entire system behaving under stress. Also measure the system’s availability, durability and it’s reliability.</p>
+<h2 id="always-have-a-rollback-plan">Always have a rollback plan</h2>
+<p>Always have a backup plan because things can go wrong. Plan to revert the impact of the disaster. If doing things manually, be extra careful, don’t break ssh access to machines.</p>
+<h2 id="troubleshoot-and-fix-it">Troubleshoot and fix it</h2>
+<p>Once done with running the experiments, there will be two possible outcomes: either it’s verified that the system is resilient to the failure introduced, or found an issue and need to fix.</p>
 <p>Both of the above two are good outcomes. In first, increased confidence in the entire system, and on the 2nd, find a potential problem before it causes an outage in production.</p>
-<p>Principles of Chaos Engineering
-Sidney Dekker famously quotes “ The performance of complex programs is typically optimized at the edge of chaos, just before program behaviour will become unrecognizably turbulent.”</p>
+<h2 id="principles-of-chaos-engineering">Principles of Chaos Engineering</h2>
+<p>Sidney Dekker famously quotes “ The performance of complex programs is typically optimized at the edge of chaos, just before program behaviour will become unrecognizably turbulent.”</p>
 <p>The principles of chaos programming embody this quote to the fullest, and the following points summarize the principles apply.</p>
 <p>Hypothesizing About Steady State: A steady-state of a program can be said to be one which under the specified condition, gives the expected output. But, how do we come to know if the program under development is steady? To study the behaviour of the program one needs to try out the various functionalities themselves, test every detail until the very end.</p>
 <p>A better approach, however, is to collect data. Data about the system, testing environment, production environment and then set the quality metrics.</p>
@@ -137,10 +137,10 @@ Sidney Dekker famously quotes “ The performance of complex programs is typical
 <p>Resiliency Experiments: Carry out resiliency experiments to deliberately cause a noncritical part of the program to fail in order to verify that the program degrades gracefully.</p>
 <p>Automate Experiments: Automate the execution of experiments as much as possible along with the analysis of experimental results that will aspire to automate new experiments.</p>
 <p>Run Experiments close to Production: Run your experiments as close to the production environment as possible. The ideal implementation runs all experiments directly with the actual input received in the production environment.</p>
-<p>Adopting Chaos Engineering Principles
-When we are developing a new application, the most exciting thing is launching the service to the consumers. But there’s a catch, we can never be sure that the distributed system we designed will be resilient under severe conditions whilst in production. If there is something that can go wrong, will go wrong! We strive to create quality products that are resilient to such failures. One way to do so is to identify problems that could arise in production and rather than waiting for breakage in production, proactively inject failures in order to prepare for when the lightning strikes. That’s the core idea behind adopting chaos programming.</p>
-<p>How can we adopt
-Start by planning experiments and compiling a list of potential failure modes and how to simulate them.
+<h2 id="adopting-chaos-engineering-principles">Adopting Chaos Engineering Principles</h2>
+<p>When we are developing a new application, the most exciting thing is launching the service to the consumers. But there’s a catch, we can never be sure that the distributed system we designed will be resilient under severe conditions whilst in production. If there is something that can go wrong, will go wrong! We strive to create quality products that are resilient to such failures. One way to do so is to identify problems that could arise in production and rather than waiting for breakage in production, proactively inject failures in order to prepare for when the lightning strikes. That’s the core idea behind adopting chaos programming.</p>
+<h2 id="how-can-we-adopt">How can we adopt</h2>
+<p>Start by planning experiments and compiling a list of potential failure modes and how to simulate them.
 Anticipate when the trouble for customers can arise.
 Inject failures at various levels: Application, API, Database, Hardware, cloud infrastructure like intentionally terminate cluster machines, kill worker processes, delete database tables, cut off access to internal and external services.
 Monitor and Observe the failures close to the production environment and how it tends to affect your program.
@@ -170,8 +170,8 @@ It eliminates the need for debugging in a Production environment.
 Chaos Engineering helps in creating self-healing infrastructure.
 Use Cases of Chaos Engineering
 The importance of chaos programming can be understood in the following instances:</p>
-<p>Power outages
-There is no guide when a power outage can trigger a widespread blackout.
+<h2 id="power-outages">Power outages</h2>
+<p>There is no guide when a power outage can trigger a widespread blackout.
 System operators will be unaware of the malfunction that caused the systems to slow down or in the worse case caused a complete rip-off.
 This led to a condition where the failure deprived them of both audio and visual alerts for important changes in system state.
 Chaos Engineering helps to test monitoring tools, metrics, dashboards, alerts, and thresholds on event-specific triggers such as this.
